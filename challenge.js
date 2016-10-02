@@ -19,15 +19,19 @@ Challenge = {
     } else {
       maxEven = end;
     }
-
-    for (i = end; i >= start; i--) {
-      if ( result % i !== 0 &&
-           ( this.isOdd(i) ||
-             i === maxEven ) ) {
-        result = i * result;
-      }
+    var LCM = 0;
+    var found = false;
+    while (!found) {
+    	LCM++;
+	    for (var i = start; i <= end; i++) {
+	      if ( LCM % i !== 0 )  {
+	        break;
+	      } else if (i === end ) {
+	      	return LCM;
+	      }
+	    }
     }
-    return result;
+    // console.log(possible);
   },
 
   isOdd: function(value) {

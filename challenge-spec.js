@@ -70,3 +70,21 @@ describe('#isOdd', function(){
     expect(actual).to.eql(expected);
   })
 });
+
+describe('#smallestCommons', function(){
+  it('should return 6056820 for 23 and 18', function() {
+    var input = [23, 18];
+    var expected = 6056820;
+    var actual = challenge.smallestCommons(input);
+    expect(actual).to.eql(expected);
+  })
+});
+
+describe('#smallestCommons', function(){
+  it('should return 1000001000 for 1000 and 100001', function() {
+    var input = [1000, 100001];
+    var expected = 1000001000;
+    var actual = challenge.smallestCommons(input);
+    expect(actual).to.eql(expected);
+  })
+});
